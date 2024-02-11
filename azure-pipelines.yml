@@ -45,7 +45,7 @@ stages:
      steps:
      - task: AzureRmWebAppDeployment@3
        inputs:
-         azureSubscription: 'aaf76651-a8e8-4960-bf98-c4170867b797'
+         azureSubscription: 'Azure-sub'
          appType: 'applinux'
          WebAppName: 'dockerknox'
          DockerNamespace: '$(containerRegistry)'
