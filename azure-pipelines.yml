@@ -46,13 +46,12 @@ stages:
      - task: AzureRmWebAppDeployment@3
        inputs:
          azureSubscription: 'aaf76651-a8e8-4960-bf98-c4170867b797'
-         appType: applinux 
+         appType: 'applinux'
          WebAppName: 'dockerknox'
          DockerNamespace: '$(containerRegistry)'
          DockerRepository: '$(imageRepository)'
          DockerImageTag: '$(Build.BuildId)'
-         WebAppUri: WebAppUrl
+         WebAppUri: 'WebAppUrl'
          TakeAppOfflineFlag: true
          UseWebDeploy: true
          RenameFilesFlag: true
-       
