@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'b7626bfc-7883-4117-8eee-2813d250ae1d'
   imageRepository: 'dockerknox'
   containerRegistry: 'konxdocker.azurecr.io'
-  dockerfilePath: '$**/Dockerfile'
+  dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
