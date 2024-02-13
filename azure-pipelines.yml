@@ -60,4 +60,4 @@ stages:
          action: 'deploy'
          connectionType: 'kubernetesServiceConnection'
          kubernetesServiceConnection: 'kuber'
-         manifests: 'app.yaml'
+         manifests: '$(Build.Source.Directory)/kuber/yamls/app.yaml'
