@@ -55,3 +55,11 @@ stages:
          TakeAppOfflineFlag: true
          UseWebDeploy: true
          RenameFilesFlag: true
+     - task: KubernetesManifest@1
+       inputs:
+         action: 'deploy'
+         connectionType: 'azureResourceManager'
+         azureSubscriptionConnection: 'Azure subscription'
+         azureResourceGroup: 'dockerCICD'
+         kubernetesCluster: 'AKS'
+         manifests: 'app.yaml'
